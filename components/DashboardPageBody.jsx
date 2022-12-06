@@ -4,13 +4,12 @@ import { AiOutlineHome } from "react-icons/ai";
 import { BsFillPeopleFill } from "react-icons/bs";
 import { RiQuillPenFill } from "react-icons/ri";
 import { AiOutlineComment } from "react-icons/ai";
-import { AiFillFolderAdd } from "react-icons/ai";
 import Sidebar from "./Sidebar/Sidebar";
 import DashboardPage from "./Dashboardpages/DashboardPage";
 import QuizPage from "./Dashboardpages/QuizPage";
 import StudentPage from "./Dashboardpages/StudentPage";
 import CreateCoursePage from "./Dashboardpages/CreateCoursePage";
-import Modal from "./modal/modal";
+
 import CoursesPage from "./Dashboardpages/CoursesPage";
 
 export const sidebarMenu = [
