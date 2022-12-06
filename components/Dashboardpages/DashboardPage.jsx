@@ -8,6 +8,7 @@ import { lineData, lineDataSets, linesOptions } from "../data/lines";
 
 import { Chart as ChartJs } from "chart.js/auto";
 import { data } from "autoprefixer";
+import ChartComponent from "./ChartsComponent";
 
 export default function DashboardPage() {
   const [lines, setLines] = useState({
@@ -63,8 +64,9 @@ export default function DashboardPage() {
           </div>
 
           {/* charts */}
-          <div className="flex  items-start gap-8">
-            <div className="min-w-0 w-[45%] h-[26.6rem] p-4 bg-white rounded-lg shadow-xs dark:bg-gray-800 mb-4">
+          <ChartComponent />
+          {/* <div className="flex  items-start gap-8">
+            <div className="min-w-0 h-auto w-[45%]  p-4 bg-white rounded-lg shadow-xs dark:bg-gray-800 mb-4">
               <h4 className="mb-4 font-semibold text-gray-800 dark:text-gray-300">
                 Students
               </h4>
@@ -113,7 +115,7 @@ export default function DashboardPage() {
               </div>
             </div>
 
-            <div className="min-w-0 w-[42%]  p-4 bg-white rounded-lg shadow-xs dark:bg-gray-800 mb-4">
+            <div className="min-w-0 w-[42%] h-auto  p-4 bg-white rounded-lg shadow-xs dark:bg-gray-800 mb-4">
               <h4 className="mb-4 font-semibold text-gray-800 dark:text-gray-300">
                 Pie Data
               </h4>
@@ -148,7 +150,7 @@ export default function DashboardPage() {
                 </div>
               </div>
             </div>
-          </div>
+          </div> */}
         </div>
       </main>
     </div>

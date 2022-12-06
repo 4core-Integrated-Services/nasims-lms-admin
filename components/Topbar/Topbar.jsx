@@ -6,6 +6,7 @@ import { BsBellFill } from "react-icons/bs";
 import { BsPerson } from "react-icons/bs";
 import { BsGearFill } from "react-icons/bs";
 import { RiLogoutBoxLine } from "react-icons/ri";
+import create from "zustand";
 
 const notificationitems = [
   {
@@ -43,13 +44,21 @@ const profileItems = [
   },
 ];
 
+// export const useName = create((set) => ({
+//   firstName: "wisdom",
+//   setFirstName: (name) => {
+//     set(() => ({ firstName: name }));
+//   },
+// }));
+
 export default function Topbar() {
   const [notificationOpen, setNotificationOpen] = useState(false);
   const [profileOpen, setProfileOpen] = useState(false);
+  // const { firstName, setFirstName } = useName((state) => state);
   function searchFeature() {
     console.log("searchFeature");
   }
-
+  // console.log({ firstName });
   function toggleNotificationsMenu() {
     if (notificationOpen == false) {
       setNotificationOpen(true);
@@ -61,6 +70,7 @@ export default function Topbar() {
     }
   }
   function toggleProfileMenu() {
+    // setFirstName("amos");
     if (profileOpen == false) {
       setProfileOpen(true);
       setNotificationOpen(false);

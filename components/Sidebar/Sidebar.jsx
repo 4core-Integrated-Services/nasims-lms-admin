@@ -25,11 +25,10 @@ export default function Sidebar() {
                 ></span>
                 <div className="flex gap-4 items-center">
                   {menu.icon}
-                  <Link href={`/page${menu.link}`} key={menu.link} passHref>
+                  <Link href={`${menu.link}`} key={menu.link} passHref>
                     <p
                       className="dark:text-white text-gray-600 capitalize text-1xl font-semibold"
                       onClick={(e) => {
-                        e.preventDefault();
                         pageMenu.onMenuClick(menu);
                       }}
                     >
@@ -83,14 +82,14 @@ export default function Sidebar() {
                 {/*body*/}
                 <div className="relative p-6 flex-auto">
                   <p className="my-4 text-slate-500 dark:text-slate-100 text-lg leading-relaxed">
-                    We reserve the right to remove any and all content that
+                    {`       We reserve the right to remove any and all content that
                     breach our terms of argreement. Incase of any mishap or
                     breach of argreement, you would be subject to a lifetime ban
                     from our platform and all your content deletedfrom our
                     database also reserve the right to amend these terms and
                     conditions and it's linking policy at any time. By clicking
                     accept, you agree to be bound to and follow these linking
-                    terms and conditions.
+                    terms and conditions.`}
                   </p>
                 </div>
                 {/*footer*/}
@@ -105,16 +104,18 @@ export default function Sidebar() {
                   >
                     Decline
                   </button>
-                  <button
-                    className="bg-green-500 text-white active:bg-emerald-600 font-bold uppercase text-sm px-6 py-3 rounded shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
-                    type="button"
-                    onClick={() => {
-                      setShowModal(false);
-                      pageMenu.onMenuClick(sidebarMenu[4]);
-                    }}
-                  >
-                    Accept
-                  </button>
+                  <Link href="/create-course" passHref>
+                    <button
+                      className="bg-green-500 text-white active:bg-emerald-600 font-bold uppercase text-sm px-6 py-3 rounded shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
+                      type="button"
+                      onClick={() => {
+                        setShowModal(false);
+                        // pageMenu.onMenuClick(sidebarMenu[4]);
+                      }}
+                    >
+                      Accept
+                    </button>
+                  </Link>
                 </div>
               </div>
             </div>

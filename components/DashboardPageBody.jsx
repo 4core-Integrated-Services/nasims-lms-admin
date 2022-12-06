@@ -6,17 +6,17 @@ import { RiQuillPenFill } from "react-icons/ri";
 import { AiOutlineComment } from "react-icons/ai";
 import { AiFillFolderAdd } from "react-icons/ai";
 import Sidebar from "./Sidebar/Sidebar";
-import CommentsPage from "./Dashboardpages/CommentsPage";
 import DashboardPage from "./Dashboardpages/DashboardPage";
 import QuizPage from "./Dashboardpages/QuizPage";
 import StudentPage from "./Dashboardpages/StudentPage";
 import CreateCoursePage from "./Dashboardpages/CreateCoursePage";
 import Modal from "./modal/modal";
+import CoursesPage from "./Dashboardpages/CoursesPage";
 
 export const sidebarMenu = [
   {
     name: "Dashboard",
-    link: "/dashboard",
+    link: "/",
     icon: (
       <AiOutlineHome className="w-5 h-5 text-gray-900 dark:text-gray-100" />
     ),
@@ -39,12 +39,12 @@ export const sidebarMenu = [
     component: <QuizPage />,
   },
   {
-    name: "comments",
-    link: "/comments",
+    name: "Courses",
+    link: "/courses",
     icon: (
       <AiOutlineComment className="w-5 h-5 text-gray-900 dark:text-gray-100" />
     ),
-    component: <CommentsPage />,
+    component: <CoursesPage />,
   },
   {
     name: "Create Course",
@@ -67,7 +67,7 @@ export default function DashboardPageBody() {
   return (
     <>
       <Sidebar />
-      {pageMenu.pageSelected.component}
+      {/* {pageMenu.pageSelected.component} */}
     </>
   );
 }

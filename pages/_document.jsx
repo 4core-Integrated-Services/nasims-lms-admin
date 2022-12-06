@@ -16,7 +16,12 @@ export default function Document() {
           rel="stylesheet"
         ></link>
       </Head>
-      <body className="flex h-screen bg-gray-50 dark:bg-gray-900">
+      <body
+        className="flex h-screen bg-gray-50 dark:bg-gray-900"
+        style={{
+          fontStyle: "Raleway",
+        }}
+      >
         <Main />
         <NextScript />
       </body>
