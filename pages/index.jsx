@@ -1,4 +1,4 @@
-import DashboardPageBody from "../components/dashboardPageBody";
+import React from "react";
 import DashboardPage from "../components/Dashboardpages/DashboardPage";
 import Topbar from "../components/Topbar/Topbar";
 import Sidebar from "../components/Sidebar/Sidebar";

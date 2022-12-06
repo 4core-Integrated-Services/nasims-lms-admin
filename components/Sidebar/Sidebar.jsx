@@ -1,8 +1,7 @@
 import React, { useState } from "react";
 import Link from "next/link";
-import { usePage, sidebarMenu } from "../dashboardPageBody";
+import { usePage, sidebarMenu } from "../DashboardPageBody";
 import { AiOutlineClose } from "react-icons/ai";
-import Modal from "../modal/modal";
 
 export default function Sidebar() {
   const pageMenu = usePage((state) => state);
